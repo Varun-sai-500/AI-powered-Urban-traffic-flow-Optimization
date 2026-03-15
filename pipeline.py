@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-# Load YOLO model
 model = YOLO("models/yolov8s.pt")
 
 vehicle_classes = [2, 3, 5, 7]  # car, motorcycle, bus, truck
