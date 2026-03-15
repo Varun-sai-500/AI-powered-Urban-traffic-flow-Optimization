@@ -5,6 +5,7 @@ from sklearn.linear_model import LinearRegression
 
 vehicle_classes = [2, 3, 5, 7]
 
+
 class VehicleDetector:
     def __init__(self, model_path="models/yolov8s.pt"):
         self.model = YOLO(model_path)

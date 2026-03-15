@@ -1,3 +1,12 @@
+---
+title: AI Powered Urban Traffic Flow Optimization
+emoji: 🚦
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_file: app.py
+pinned: false
+---
 # AI-powered-Urban-traffic-flow-Optimization
 
 A prototype for AI-driven urban traffic management using computer vision and predictive modeling.
@@ -30,3 +39,7 @@ A prototype for AI-driven urban traffic management using computer vision and pre
 - `ui/app.py`: Streamlit dashboard
 - `models/yolov8s.pt`: Pretrained YOLO model
 
+
+### hugging face deployment 
+- Repo - https://huggingface.co/spaces/madhi9/smartflow-ai
+- Link - https://madhi9-smartflow-ai.hf.space/

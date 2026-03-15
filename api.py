@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse,HTMLResponse
 from pydantic import BaseModel
 import threading
 import time
@@ -139,6 +140,11 @@ def video_processing_thread(video_path=None):
 
     cap.release()
 
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "processing": processing}
+
 @app.get("/status")
 def get_status():
     return latest_data
@@ -229,6 +235,18 @@ def export_analytics():
     rows = cursor.fetchall()
     writer.writerows(rows)
     return {"csv": output.getvalue()}
+
+@app.get("/")
+def home():
+    return RedirectResponse(url="/streamlit")
+
+@app.get("/streamlit")
+def streamlit_ui():
+    return HTMLResponse("""
+    <iframe src="http://localhost:8501"
+    width="100%" height="1000"
+    frameborder="0"></iframe>
+    """)
 
 if __name__ == "__main__":
     import uvicorn
