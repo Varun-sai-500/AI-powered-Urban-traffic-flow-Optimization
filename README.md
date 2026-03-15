@@ -42,4 +42,5 @@ A prototype for AI-driven urban traffic management using computer vision and pre
 
 ### hugging face deployment 
 - Repo - https://huggingface.co/spaces/madhi9/smartflow-ai
-- Link - https://madhi9-smartflow-ai.hf.space/
+- Live - https://madhi9-smartflow.hf.space/
+- FastAPI server - https://madhi9-smartflow-ai.hf.space/
